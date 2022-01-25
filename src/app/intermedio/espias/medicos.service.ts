@@ -9,23 +9,20 @@ export class MedicosService {
 
   getMedicos() {
     return this.http.get('...').pipe(
-      map( resp => resp['medicos'] )
-    )
+      map( (resp:any) => resp['medicos'] )
+    );
   }
 
   agregarMedico( medico: any ) {
     return this.http.post('...', medico ).pipe(
-      map( resp => resp['medico'] )
-    )
-
+      map( (resp:any) => resp['medico'] )
+    );
   }
 
   borrarMedico( id: string ) {
     return this.http.delete('...' ).pipe(
-      map( resp => resp['medico'] )
-    )
-
+      map( (resp:any) => resp['medico'] )
+    );
   }
-
-
 }
+
